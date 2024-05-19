@@ -34,7 +34,7 @@ def label_encode(df, column_name):
     if column_name in df.columns:
         categories = df[column_name].unique()
         mapping = {category: index for index, category in enumerate(categories)}
-        df[column_name] = df[column_name].map(mapping).replace
+        df[column_name] = df[column_name].map(mapping)
         print(f"Label encoding applied to column '{column_name}' successfully.")
     else:
         print(f"Column '{column_name}' not found in the DataFrame.")
